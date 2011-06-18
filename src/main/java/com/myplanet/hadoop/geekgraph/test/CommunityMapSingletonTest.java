@@ -29,10 +29,9 @@ public class CommunityMapSingletonTest {
 	 */
 	@Test
 	public void testFindCommunity() {
-		CommunityMapSingleton map = CommunityMapSingleton.getInstance();
-		String php = map.findCommunity(new Integer(928961));
+		String php = CommunityMapSingleton.findCommunity(new Integer(928961));
 		assertEquals(php, "php");
-		String drupal = map.findCommunity(new Integer(814641));
+		String drupal = CommunityMapSingleton.findCommunity(new Integer(814641));
 		assertEquals(drupal, "drupal");
 	}
 

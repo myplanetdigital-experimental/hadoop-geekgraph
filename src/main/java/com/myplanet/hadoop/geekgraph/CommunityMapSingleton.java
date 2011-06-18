@@ -11,7 +11,7 @@ import java.util.HashMap;
  */
 public class CommunityMapSingleton {
 	
-    private static CommunityMapSingleton instance = null;
+    private static CommunityMapSingleton instance = new CommunityMapSingleton();
     private static HashMap<Integer, String> map;
     
     // Private constructor prevents instantiation from other classes
@@ -52,9 +52,6 @@ public class CommunityMapSingleton {
     }
  
     public static CommunityMapSingleton getInstance() {
-    	if (instance == null) {
-    		instance = new CommunityMapSingleton();
-    	}
         return instance;
     }
     
