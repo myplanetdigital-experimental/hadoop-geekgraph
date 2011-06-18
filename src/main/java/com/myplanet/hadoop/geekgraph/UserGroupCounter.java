@@ -80,7 +80,7 @@ public class UserGroupCounter extends Configured implements Tool {
 
 			long count = 0;
 			for (LongWritable value : values) {
-				count += value.get();
+				count ++;
 			}
 
 			context.write(key, new LongWritable(count));

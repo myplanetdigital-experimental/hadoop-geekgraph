@@ -33,6 +33,8 @@ public class CommunityMapSingletonTest {
 		assertEquals(php, "php");
 		String drupal = CommunityMapSingleton.findCommunity(new Long((long)814641));
 		assertEquals(drupal, "drupal");
+		String rails = CommunityMapSingleton.findCommunity(new Long((long)14561327));
+		assertEquals(rails, "rails");
 	}
 
 }
