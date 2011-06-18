@@ -25,13 +25,13 @@ public class CommunityMapSingletonTest {
 	}
 
 	/**
-	 * Test method for {@link com.myplanet.hadoop.geekgraph.CommunityMapSingleton#findCommunity(java.lang.Integer)}.
+	 * Test method for {@link com.myplanet.hadoop.geekgraph.CommunityMapSingleton#findCommunity(Long)}.
 	 */
 	@Test
 	public void testFindCommunity() {
-		String php = CommunityMapSingleton.findCommunity(new Integer(928961));
+		String php = CommunityMapSingleton.findCommunity(new Long((long)928961));
 		assertEquals(php, "php");
-		String drupal = CommunityMapSingleton.findCommunity(new Integer(814641));
+		String drupal = CommunityMapSingleton.findCommunity(new Long((long)814641));
 		assertEquals(drupal, "drupal");
 	}
 
