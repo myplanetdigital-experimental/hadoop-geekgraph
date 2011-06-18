@@ -10,11 +10,13 @@ import java.util.HashMap;
  *
  */
 public class CommunityMapSingleton {
-    private static final CommunityMapSingleton INSTANCE = new CommunityMapSingleton();
+	
+    private static CommunityMapSingleton instance = null;
     private static HashMap<Integer, String> map;
     
     // Private constructor prevents instantiation from other classes
     private CommunityMapSingleton() {
+    	map = new HashMap<Integer, String>();
     	map.put(new Integer(14561327), "rails");
     	map.put(new Integer(14761655), "rails");
     	map.put(new Integer(9462972), "rails");
@@ -50,7 +52,10 @@ public class CommunityMapSingleton {
     }
  
     public static CommunityMapSingleton getInstance() {
-        return INSTANCE;
+    	if (instance == null) {
+    		instance = new CommunityMapSingleton();
+    	}
+        return instance;
     }
     
     public static String findCommunity(Integer id) {
