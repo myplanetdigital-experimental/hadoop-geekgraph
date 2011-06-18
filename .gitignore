@@ -1,0 +1,12 @@
+# /
+/bin
+/.classpath
+/.loadpath
+/.project
+/.settings
+/.gradle
+/bin-eclipse
+/build
+/dist
+/junit
+/nbproject
